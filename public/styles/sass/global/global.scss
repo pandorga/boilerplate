@@ -1,0 +1,92 @@
+/* Remove box-Sizing in browser */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Remove border focus browser */
+*:focus {
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* Links */
+a {
+    color: #5c4b46;
+    text-decoration: underline;
+}
+
+html {
+    background-color: #e6e3e3;
+}
+
+body {
+    font-family: 'Lato' !important;
+    font-weight: 400;
+    background: #FFF;
+    overflow-x: hidden;
+
+    @media screen and (min-width: 700px) {
+        opacity: 0;
+    }
+}
+
+.table {
+    display: table;
+}
+
+/* Limitador de content */
+.ctn-limit {
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.-text-right {
+    text-align: right;
+}
+
+.-text-left {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.-retreat-below {
+    margin-bottom: -50px;
+    z-index: 999;
+    position: relative;
+
+    @include breakpoint(small) {
+        margin-bottom: 0;
+
+        @include background(linear-gradient(rgba(142, 194, 222, 0.1), #FFF) left repeat !important);
+    }
+}
+
+@mixin box-shadow($val) {
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    box-shadow: $val;
+}
+
+@mixin radius($val) {
+    @include border-top-radius($val);
+
+    @include border-right-radius($val);
+
+    @include border-bottom-radius($val);
+
+    @include border-left-radius($val);
+}
+
+@mixin background-size($val) {
+    -webkit-background-size: $val;
+    -moz-background-size: $val;
+    -o-background-size: $val;
+    background-size: $val;
+}

@@ -1,0 +1,22 @@
+/* PACKAGES */
+@import "bourbon/bourbon";
+
+/* COMPONENTS */
+@import "components/grid";
+@import "components/mediaQueries";
+
+/* GLOBAL */
+@import "global/variables";
+
+/* FONTS */
+@import "fonts/fonts";
+
+/* GLOBAL */
+@import "global/global";
+
+/* PARTIALS */
+@import "partials/header";
+@import "partials/footer";
+
+/* PAGES */
+@import "pages/home";
