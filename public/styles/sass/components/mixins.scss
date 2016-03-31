@@ -1,0 +1,22 @@
+@mixin box-shadow($val) {
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    box-shadow: $val;
+}
+
+@mixin radius($val) {
+    @include border-top-radius($val);
+
+    @include border-right-radius($val);
+
+    @include border-bottom-radius($val);
+
+    @include border-left-radius($val);
+}
+
+@mixin background-size($val) {
+    -webkit-background-size: $val;
+    -moz-background-size: $val;
+    -o-background-size: $val;
+    background-size: $val;
+}
