@@ -1,0 +1,16 @@
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+@function unicode($str) {
+    @return unquote('"') + unquote(str-insert($str, "\\", 1)) + unquote('"');
+}
+
+.#{$fa-css-prefix}- {
+    @each $key, $value in $fa-var {
+        &#{$key} {
+            &:before {
+                content: unicode($value);
+            }
+        }
+    }
+}

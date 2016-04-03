@@ -1,0 +1,3 @@
+@mixin box-shadow($box) {
+	@include prefixer(box-shadow, $box, webkit moz spec);
+}

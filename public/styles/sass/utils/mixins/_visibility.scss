@@ -1,0 +1,21 @@
+@mixin hideIf($selector) {
+	#{$selector} { display: none; }
+}
+
+@mixin showIf($selector, $display: block) {
+	#{$selector} { display: $display; }
+}
+
+@mixin showUntil($size, $display: block) {
+    display: $display;
+    @include at($size) {
+        display: none;
+    }
+}
+
+@mixin hideUntil($size, $display: block) {
+    display: none;
+    @include at($size) {
+        display: $display;
+    }
+}
