@@ -9,10 +9,7 @@
 	'vendors/bourbon/bourbon',
 	'vendors/reset/reset',
 	'vendors/font-awesome/font-awesome',
-	'vendors/foundation/foundation';
-
-/* FOUNDATION INIT */
-@include foundation-grid;
+	'vendors/easy-grid/easy-grid';
 
 /* UNTILS */
 @import

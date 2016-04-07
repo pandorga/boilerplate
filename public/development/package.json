@@ -1,11 +1,16 @@
 {
-	"name": "ProjectBoilerplate",
+	"name": "boilerplate",
 	"version": "1.0.0",
 	"author": "Developer or Enterprise name",
-	"scripts": {
-		"build": "grunt build",
-		"start": "npm install && npm install -g grunt-cli && npm install mjml && gem install sass && gem install sass-globbing"
+	"description": "The most responsive front-end framework",
+	"author": {
+		"name": "Christian Fortes",
+		"email": "giovanirushl@gmail.com",
+		"url": "http://christianfortes.com"
 	},
+	"homepage": "http://christianfortes.com/boilerplate",
+	"license": "MIT",
+	"dependencies": {},
 	"devDependencies": {
 		"grunt": "^0.4.5",
 		"grunt-contrib-imagemin": "^1.0.0",
@@ -13,5 +18,16 @@
 		"grunt-contrib-watch": "^0.6.1",
 		"grunt-mjml": "^0.1.1"
 	},
-	"dependencies": {}
+	"scripts": {
+		"build": "grunt build",
+		"start": "npm install && npm install -g grunt-cli && npm install mjml && gem install sass && gem install sass-globbing"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/christianfortes/boilerplate.git"
+	},
+	"bugs": {
+		"url": "https://github.com/christianfortes/boilerplate/issues",
+		"email": "giovanirushl@gmail.com"
+	}
 }
