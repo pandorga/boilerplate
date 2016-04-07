@@ -20,7 +20,8 @@
 	},
 	"scripts": {
 		"build": "grunt build",
-		"start": "npm install && npm install -g grunt-cli && npm install mjml && gem install sass && gem install sass-globbing"
+		"start": "npm install && npm install -g grunt-cli && npm install mjml && gem install sass",
+		"watch": "grunt"
 	},
 	"repository": {
 		"type": "git",
