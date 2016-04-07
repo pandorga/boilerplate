@@ -1,13 +1,15 @@
 @charset "UTF-8";
 
 /* CONFIG */
-@import 'config/app';
+@import
+	'config/app';
 
 /* PACKAGES */
-@import 'vendors/bourbon/bourbon',
-		'vendors/reset/reset',
-		'vendors/font-awesome/font-awesome',
-		'vendors/foundation/foundation';
+@import
+	'vendors/bourbon/bourbon',
+	'vendors/reset/reset',
+	'vendors/font-awesome/font-awesome',
+	'vendors/foundation/foundation';
 
 /* FOUNDATION INIT */
 @include foundation-grid;
@@ -28,8 +30,10 @@
 /* COMPONENTS */
 
 /* PARTIALS */
-@import "partials/header";
-@import "partials/footer";
+@import
+	"partials/header",
+	"partials/footer";
 
 /* PAGES */
-@import "pages/styleguide";
+@import
+	"pages/styleguide";
