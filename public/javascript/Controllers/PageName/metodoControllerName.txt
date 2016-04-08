@@ -1,0 +1,2 @@
+Se usar o angular, a cada controller que criar na página,
+para controlar um lugar, criar cada uma uma

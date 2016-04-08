@@ -1,9 +1,8 @@
 module.exports = function (grunt) {
-	var folder = {
-			sass: "../styles/sass/",
-			css: "../styles/css/"
-		}
-		// Project configuration.
+	var config = require('./config.json');
+	var path = config.directory;
+
+	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
@@ -14,7 +13,7 @@ module.exports = function (grunt) {
 				}
 			},
 			css: {
-				files: [folder.sass + '*.scss', folder.sass + '**/*.scss'],
+				files: [path.sass + '*.scss', path.sass + '**/*.scss'],
 				tasks: ['sass:dev'],
 				options: {
 					spawn: true,
@@ -31,13 +30,10 @@ module.exports = function (grunt) {
 					style: 'expanded',
 					sourcemap: 'none'
 				},
-				files: [{
-					expand: true,
-					cwd: folder.sass,
-					src: ['*.scss'],
-					dest: folder.css,
-					ext: '.css'
-				}]
+				files: {
+					[path.css + "main.css"]: [path.sass + "main.scss"],
+					[path.css + "home.css"]: [path.sass + "pages/_home.scss"],
+				}
 			},
 			prod: {
 				options: {
@@ -49,9 +45,9 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: folder.sass,
+					cwd: path.sass,
 					src: ['*.scss'],
-					dest: folder.css,
+					dest: path.css,
 					ext: '.css'
 				}]
 			}
