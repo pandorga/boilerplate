@@ -1,6 +1,6 @@
 {
-	"directory": {
-		"sass": "../styles/sass/",
-		"css": "../styles/css/"
-	}
+    "directory": {
+        "sass": "../styles/sass/",
+        "css": "../styles/css/"
+    }
 }
