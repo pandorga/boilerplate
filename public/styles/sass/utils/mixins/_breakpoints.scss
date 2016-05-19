@@ -1,19 +1,19 @@
-@mixin breakpoint($breakpoint, $type: max) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @if $breakpoint==xs {
-            @media screen and (#{$type}-width: #{map-get($breakpoints, $breakpoint)}) {
-                @content;
-            }
-        }
-        @else {
-            @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
-                @content;
-            }
+@mixin breakpoint($breakpoint, $break: null){
+    @if $break != null {
+        @media screen and (#{$break}-width: $breakpoint) {
+            @content;
         }
     }
-    @else {
-        @media screen and (#{$type}-width: $breakpoint) {
-            @content;
+    @else{
+        @each $type, $value in $breakpoints {
+            @if map-has-key($value, $breakpoint) {
+                @media screen and (#{$type}-width: #{map-get($value, $breakpoint)}) {
+                    @content;
+                }
+            }
+            @else {
+                @error "Breakpoint não encontrado!";
+            }
         }
     }
 }

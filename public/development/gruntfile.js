@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                     style: 'expanded',
                     sourcemap: 'none'
                 },
-                files: [path.css + cssFileName]
+                files: [path.css + 'style.css']
             },
             prod: {
                 options: {
