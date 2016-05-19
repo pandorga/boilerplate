@@ -31,7 +31,13 @@ module.exports = function(grunt) {
                     style: 'expanded',
                     sourcemap: 'none'
                 },
-                files: [path.css + 'style.css']
+                files: [{
+                    expand: true,
+                    cwd: path.sass,
+                    src: ['*.scss'],
+                    dest: path.css,
+                    ext: '.css'
+                }]
             },
             prod: {
                 options: {
@@ -52,9 +58,9 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.event.on('watch', function(action, filepath, target, outro) {
-        cssFileName = filepath + '.tscss';
-    });
+    // grunt.event.on('watch', function(action, filepath, target, outro) {
+    //     cssFileName = filepath + '.tscss';
+    // });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-watch');

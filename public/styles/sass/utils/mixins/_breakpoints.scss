@@ -4,15 +4,12 @@
             @content;
         }
     }
-    @else{
+    @else {
         @each $type, $value in $breakpoints {
             @if map-has-key($value, $breakpoint) {
                 @media screen and (#{$type}-width: #{map-get($value, $breakpoint)}) {
                     @content;
                 }
-            }
-            @else {
-                @error "Breakpoint não encontrado!";
             }
         }
     }
