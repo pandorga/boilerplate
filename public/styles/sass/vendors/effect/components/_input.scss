@@ -1,0 +1,17 @@
+*[data-effect]{
+	position: relative;
+}
+
+.effect-type{
+	position: absolute;
+	font-size: 14px;
+	top: 17px;
+	@include transition(all .3s linear);
+	cursor: auto;
+
+	&.animate{
+		font-size: 13px;
+		color: #bababa;
+		top: 0;
+	}
+}

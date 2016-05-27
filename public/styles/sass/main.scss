@@ -7,6 +7,7 @@
 /* PACKAGES */
 @import
 	'vendors/bourbon/bourbon',
+	'vendors/family/family',
 	'vendors/reset/reset',
 	'vendors/font-awesome/font-awesome';
 
@@ -32,4 +33,5 @@
 
 /* PAGES */
 @import
-	"pages/styleguide";
+	"pages/styleguide",
+	"pages/home";
